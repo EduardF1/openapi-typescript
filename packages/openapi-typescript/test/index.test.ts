@@ -588,7 +588,7 @@ export interface components {
     schemas: {
         Object: {
             rootDef?: $defs["StringType"];
-            nestedDef?: components["schemas"]["OtherObject"]["$defs"]["nestedDef"];
+            nestedDef?: NonNullable<components["schemas"]["OtherObject"]["$defs"]>["nestedDef"];
             remoteDef?: components["schemas"]["remoteDef"];
             $defs?: {
                 hasDefs: boolean;
